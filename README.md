@@ -160,6 +160,7 @@ pnpm dev
 
 - `OPENAI_API_KEY` 和 `OPENAI_ACCESS_TOKEN` 二选一
 - `OPENAI_API_MODEL`  设置模型，可选，默认：`gpt-3.5-turbo`
+- `OPENAI_API_TEMPERATURE` 设置模型温度，可选，范围0~2, 数值越小越准确，默认: `0.6`
 - `OPENAI_API_BASE_URL` 设置接口地址，可选，默认：`https://api.openai.com`
 
 `ACCESS_TOKEN` 可用：
@@ -221,6 +222,8 @@ services:
       # API模型，可选，设置 OPENAI_API_KEY 时可用
       OPENAI_API_MODEL: xxx
       # 反向代理，可选
+	  OPENAI_API_TEMPERATURE: xxx 
+	  # 设置模型温度，可选，范围0~2, 数值越小越准确，默认: 0.6
       API_REVERSE_PROXY: xxx
       # 访问权限密钥，可选
       AUTH_SECRET_KEY: xxx
