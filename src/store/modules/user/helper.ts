@@ -17,7 +17,7 @@ export function defaultSetting(): UserState {
     userInfo: {
       avatar: 'https://www.mclouds.online/files/upload/2023/avatar.jpg',
       name: 'Andy Qin',
-      description: 'ChatGPT Model:gpt-3.5-turbo',
+      description: 'ChatGPT Web',
     },
   }
 }

@@ -66,6 +66,8 @@ export default {
     socks: 'Socks',
     httpsProxy: 'HTTPS Proxy',
     balance: 'API Balance',
+	model: 'GPT MODEL',
+	temperature: 'Temperature',
   },
   store: {
     local: 'Local',

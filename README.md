@@ -223,8 +223,8 @@ services:
       # API模型，可选，设置 OPENAI_API_KEY 时可用
       OPENAI_API_MODEL: xxx
       # 反向代理，可选
-	  OPENAI_API_TEMPERATURE: xxx 
-	  # 设置模型温度，可选，范围0~2, 数值越小越准确，默认: 0.6
+	  OPENAI_API_TEMPERATURE: xxx
+	  # 设置模型温度，可选，范围0~2, 较高的值会使输出更随机，而较低的值会使其更加专注和确定性，默认: 0.6
       API_REVERSE_PROXY: xxx
       # 访问权限密钥，可选
       AUTH_SECRET_KEY: xxx
