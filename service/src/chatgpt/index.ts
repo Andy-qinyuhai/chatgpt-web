@@ -130,8 +130,8 @@ async function chatConfig() {
   const socksProxy = (process.env.SOCKS_PROXY_HOST && process.env.SOCKS_PROXY_PORT)
     ? (`${process.env.SOCKS_PROXY_HOST}:${process.env.SOCKS_PROXY_PORT}`)
     : '-'
-  const model = process.env.OPENAI_API_MODEL ?? '-'
-  const temperature = process.env.OPENAI_API_TEMPERATURE ?? '-'  
+  const model = process.env.OPENAI_API_MODEL ?? 'gpt-3.5-turbo'
+  const temperature = process.env.OPENAI_API_TEMPERATURE ?? '0.6'  
   return sendResponse<ModelConfig>({
     type: 'Success',
     data: { apiModel, reverseProxy, timeoutMs, socksProxy, httpsProxy, balance, model, temperature },
