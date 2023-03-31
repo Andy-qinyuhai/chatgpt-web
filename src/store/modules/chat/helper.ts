@@ -6,7 +6,7 @@ export function defaultState(): Chat.ChatState {
   const uuid = 1002
   return {
     active: uuid,
-    usingContext: true,//连续对话模式默认状态
+    usingContext: false,//连续对话模式默认状态
     history: [{ uuid, title: 'New Chat', isEdit: false }],
     chat: [{ uuid, data: [] }],
   }
