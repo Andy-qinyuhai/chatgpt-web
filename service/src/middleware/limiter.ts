@@ -11,7 +11,7 @@ const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // Maximum number of accesses within an hour
   max: maxCount,
   statusCode: 200, // 200 means success，but the message is 'Too many request from this IP in 1 hour'
-  trustProxy: true //获取真实ip
+  trustProxy: true, //获取真实ip
   message: async (req, res) => {
     res.send({ status: 'Fail', message: 'Too many request from this IP in 1 hour', data: null })
   },
