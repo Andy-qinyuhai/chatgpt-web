@@ -72,6 +72,11 @@ export default {
 	model: 'GPT 模型',
 	temperature: 'Temperature',
     monthlyUsage: '本月使用量',
+    speechSetting: '语音设置',
+    speakLang: '语言',
+    speakSound: '声音',
+    pitch: '音调',
+    rate: '语速',
   },
   store: {
     siderButton: '提示词商店',
