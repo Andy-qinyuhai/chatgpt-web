@@ -72,6 +72,11 @@ export default {
 	model: 'GPT MODEL',
 	temperature: 'Temperature',
     monthlyUsage: 'Monthly Usage',
+    speechSetting: 'Voice settings',
+    speakLang: 'Language',
+    speakSound: 'Sound',
+    pitch: 'Tone',
+    rate: 'Speech speed',
   },
   store: {
     siderButton: 'Prompt Store',
