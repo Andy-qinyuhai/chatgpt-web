@@ -43,9 +43,8 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
     model = isNotEmptyString(OPENAI_API_MODEL) ? OPENAI_API_MODEL : 'gpt-3.5-turbo'
     const options: ChatGPTAPIOptions = {
       apiKey: process.env.OPENAI_API_KEY,    
-      debug: !disableDebug,
       completionParams: { model },
-      debug: true,
+      debug: !disableDebug,
     }
 
     // increase max token limit if use gpt-4
@@ -178,11 +177,10 @@ async function chatConfig() {
   const socksProxy = (process.env.SOCKS_PROXY_HOST && process.env.SOCKS_PROXY_PORT)
     ? (`${process.env.SOCKS_PROXY_HOST}:${process.env.SOCKS_PROXY_PORT}`)
     : '-'
-  const model = process.env.OPENAI_API_MODEL ?? 'gpt-3.5-turbo'
-  const temperature = process.env.OPENAI_API_TEMPERATURE ?? '0.6'  
+  const model = process.env.OPENAI_API_MODEL ?? 'gpt-3.5-turbo'  
   return sendResponse<ModelConfig>({
     type: 'Success',
-    data: { apiModel, reverseProxy, timeoutMs, socksProxy, httpsProxy, balance, model, temperature },
+    data: { apiModel, reverseProxy, timeoutMs, socksProxy, httpsProxy, balance, model },
   })
 }
 

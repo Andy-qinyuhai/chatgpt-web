@@ -29,8 +29,7 @@ export interface ModelConfig {
   socksProxy?: string
   httpsProxy?: string
   balance?: string
-  model?: string
-  temperature?: number
+  model?: string  
 }
 
 export type ApiModel = 'ChatGPTAPI' | 'ChatGPTUnofficialProxyAPI' | undefined

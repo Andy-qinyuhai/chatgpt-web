@@ -12,8 +12,7 @@ interface ConfigState {
   socksProxy?: string
   httpsProxy?: string
   balance?: string
-  model?: string
-  temperature?: number
+  model?: string  
 }
 
 const authStore = useAuthStore()
@@ -55,7 +54,6 @@ onMounted(() => {
         {{ $t("setting.reverseProxy") }}：{{ config?.reverseProxy ?? '-' }}
       </p>
 	  <p>{{ $t("setting.model") }}：{{ config?.model ?? '-' }}</p>
-	  <p>{{ $t("setting.temperature") }}：{{ config?.temperature ?? '-' }}</p>
       <p>{{ $t("setting.timeout") }}：{{ config?.timeoutMs ?? '-' }}</p>
       <p>{{ $t("setting.socks") }}：{{ config?.socksProxy ?? '-' }}</p>
       <p>{{ $t("setting.httpsProxy") }}：{{ config?.httpsProxy ?? '-' }}</p>
