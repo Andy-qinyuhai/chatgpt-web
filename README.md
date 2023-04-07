@@ -154,7 +154,6 @@ pnpm dev
 
 - `OPENAI_API_KEY` 和 `OPENAI_ACCESS_TOKEN` 二选一
 - `OPENAI_API_MODEL`  设置模型，可选，默认：`gpt-3.5-turbo`
-- `OPENAI_API_TEMPERATURE` 设置模型温度，可选，范围0~2, 数值越小越准确，默认: `0.6`
 - `OPENAI_API_BASE_URL` 设置接口地址，可选，默认：`https://api.openai.com`
 - `OPENAI_API_DISABLE_DEBUG` 设置接口关闭 debug 日志，可选，默认：empty 不关闭
 

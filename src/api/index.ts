@@ -4,7 +4,7 @@ import { useSettingStore } from '@/store'
 
 export function fetchChatAPI<T = any>(
   prompt: string,
-  options?: { conversationId?: string; parentMessageId?: string; apiKey?: string },
+  options?: { conversationId?: string; parentMessageId?: string },
   signal?: GenericAbortSignal,
 ) {
   return post<T>({
