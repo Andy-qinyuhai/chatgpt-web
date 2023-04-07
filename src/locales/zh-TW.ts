@@ -71,8 +71,7 @@ export default {
     socks: 'Socks',
     httpsProxy: 'HTTPS Proxy',
     balance: 'API余額',
-	model: 'GPT MODEL',
-	temperature: 'Temperature',
+	model: 'GPT MODEL',	
     monthlyUsage: '本月使用量',
   },
   store: {
