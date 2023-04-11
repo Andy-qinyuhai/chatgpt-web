@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-          cache-dependency-path: './package.json'
+          cache-dependency-path: './pnpm-lock.yaml'
       - name: Install  # 下载依赖 打包项目
         run:
           npm install pnpm -g      
