@@ -19,7 +19,9 @@ jobs:
           cache-dependency-path: './pnpm-lock.yaml'
       - name: Install  # 下载依赖 打包项目
         run:
+          npn install
           npm install pnpm -g      
+          pnpm install
       - name: Build
         run:
           pnpm build
