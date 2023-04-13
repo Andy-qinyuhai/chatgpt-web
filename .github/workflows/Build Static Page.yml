@@ -1,8 +1,9 @@
 name: Build Static Page and Deploy
 on: # 监听 main 分支上的 push 事件
-  push:
-    branches:
-      - main
+  #push:
+   # branches:
+   #   - main
+  workflow_dispatch:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 构建环境使用 ubuntu
@@ -39,8 +40,8 @@ jobs:
         env: 
            GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
-           tag_name: ${{ github.ref }}
-           release_name: Release ${{ github.ref }}
+           tag_name: ${{ github.ref_name }}
+           release_name: Release ${{ github.ref_name }}
            draft: false
            prerelease: false
       - name: Upload release asset
