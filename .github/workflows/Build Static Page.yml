@@ -25,10 +25,14 @@ jobs:
       - name: Build
         run:
           pnpm run build
-      - name: Archive dist directory
-        uses: montudor/action-zip@v0.3.0
+      - name: Create Zip Archive
+        run: zip -r page.zip dist/
+
+      - name: Upload Release Artifact
+        uses: actions/upload-artifact@v2.2.4
         with:
-         args: "-r page.zip ./dist"
+          name: Release Artifact
+          path: page.zip
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
