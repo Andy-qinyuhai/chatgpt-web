@@ -70,7 +70,7 @@ export default {
     timeout: '逾時',
     socks: 'Socks',
     httpsProxy: 'HTTPS Proxy',
-    balance: 'API余額',
+    balance: 'API Credit 餘額',
 	model: 'GPT MODEL',	
     monthlyUsage: '本月使用量',
   },
