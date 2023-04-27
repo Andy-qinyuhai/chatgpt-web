@@ -3,6 +3,8 @@ on: # 监听 main 分支上的 push 事件
   #push:
    # branches:
    #   - main
+  release:
+    types: [created] # 表示在创建新的 Release 时触发
   workflow_dispatch:
 jobs:
   build-and-deploy:
