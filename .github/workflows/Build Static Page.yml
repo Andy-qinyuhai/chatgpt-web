@@ -4,8 +4,9 @@ on: # 监听 main 分支上的 push 事件
    # branches:
    #   - main
   workflow_dispatch:
-  release:
-    types: [created] # 表示在创建新的 Release 时触发
+  push:
+    tags: 
+    - "V*" # release V* 新版本时触发
   
 jobs:
   build-and-deploy:
@@ -43,8 +44,8 @@ jobs:
         env: 
            GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
-           tag_name: Pagefile
-           release_name: Release pagefile
+           tag_name: ${{ github.ref }}
+           release_name: Release ${{ github.ref }}
            draft: false
            prerelease: false
       - name: Upload release asset
